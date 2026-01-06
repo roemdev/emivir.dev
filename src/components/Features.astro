@@ -1,0 +1,44 @@
+---
+const features = [
+  {
+    number: "01",
+    title: "Estabilidad",
+    description: "Mantenimiento enfocado en que tu sitio esté siempre en línea, sin importar el tráfico."
+  },
+  {
+    number: "02",
+    title: "Optimización",
+    description: "Arquitecturas estáticas que eliminan la fricción y cargan de forma instantánea."
+  },
+  {
+    number: "03",
+    title: "Cercanía",
+    description: "Soporte directo y comunicación clara. Sin tecnicismos vacíos."
+  }
+];
+---
+
+<section id="sobre-mi" class="max-w-6xl mx-auto px-6 py-20 md:py-24 border-t border-slate-100 dark:border-slate-800">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        <div class="lg:col-span-7 space-y-8">
+            <h2 class="text-4xl font-black tracking-tighter">Honestidad técnica<span class="text-brand">.</span></h2>
+            <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                Entiendo la web como una extensión de tu trabajo profesional. Mi enfoque no se basa en lo que está de moda, sino en lo que es funcional y duradero para ti.
+            </p>
+            <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                Al integrar herramientas de inteligencia artificial en mi proceso, puedo centrar mis esfuerzos en lo más importante: entender tus necesidades y asegurar que tu inversión digital sea eficiente y transparente desde el primer día.
+            </p>
+        </div>
+        
+        <div class="lg:col-span-5 grid grid-cols-1 gap-8">
+            {features.map((item) => (
+                <div class="border-l-2 border-slate-100 dark:border-slate-800 pl-6 md:pl-8 py-2">
+                    <span class="text-brand font-black text-xs md:text-sm uppercase tracking-widest block mb-2">
+                        {item.number}. {item.title}
+                    </span>
+                    <p class="text-slate-500 text-sm">{item.description}</p>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>

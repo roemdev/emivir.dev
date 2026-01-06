@@ -1,0 +1,86 @@
+---
+// Aquí podrías recibir props si quisieras que el menú fuera dinámico
+---
+
+<header class="fixed top-0 left-0 w-full z-[100] bg-white/80 dark:bg-[#0a0a0a]/80 backdrop-blur-md border-b border-slate-100 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 h-20 grid grid-cols-2 md:grid-cols-3 items-center">
+        <div class="logo-text text-2xl z-[110]">
+            <a href="/">emivir<span class="text-brand">.</span>dev</a>
+        </div>
+        
+        <div class="hidden md:flex justify-center">
+            <button id="theme-toggle" class="p-2.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border border-transparent hover:border-slate-200 dark:hover:border-slate-700" aria-label="Cambiar tema">
+                <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+                <i data-lucide="sun" class="w-5 h-5 hidden dark:block text-brand"></i>
+            </button>
+        </div>
+
+        <div class="flex justify-end items-center space-x-2 md:space-x-4">
+            <nav class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-widest">
+                <a href="/links" class="hover:text-brand transition-colors">Enlaces</a>
+            </nav>
+
+            <button id="theme-toggle-mobile" class="flex md:hidden p-2.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Cambiar tema móvil">
+                <i data-lucide="moon" class="w-6 h-6 dark:hidden text-slate-900"></i>
+                <i data-lucide="sun" class="w-6 h-6 hidden dark:block text-brand"></i>
+            </button>
+
+            <button id="menu-btn" class="md:hidden z-[110] p-2 focus:outline-none" aria-label="Menú">
+                <i data-lucide="menu" id="menu-icon" class="w-7 h-7 block transition-transform"></i>
+                <i data-lucide="x" id="close-icon" class="w-7 h-7 hidden transition-transform"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<div id="mobile-menu" class="fixed inset-0 z-[90] bg-white dark:bg-[#0a0a0a] opacity-0 pointer-events-none translate-y-[-10px] flex flex-col justify-center items-center transition-all duration-300">
+    <div class="flex flex-col items-center space-y-12 text-3xl font-black tracking-tighter">
+        <a href={import.meta.env.BASE_URL + "links"} class="mobile-link hover:text-brand transition-colors">Enlaces<span class="text-brand">.</span></a>
+    </div>
+</div>
+
+<script>
+    // Lógica del Menú Móvil
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+    const body = document.body;
+
+    function toggleMenu() {
+        const isOpen = mobileMenu?.classList.contains('opacity-100');
+        
+        if (isOpen) {
+            mobileMenu?.classList.add('opacity-0', 'pointer-events-none', 'translate-y-[-10px]');
+            mobileMenu?.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+            menuIcon?.classList.replace('hidden', 'block');
+            closeIcon?.classList.replace('block', 'hidden');
+            body.classList.remove('menu-open');
+        } else {
+            mobileMenu?.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-[-10px]');
+            mobileMenu?.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+            menuIcon?.classList.replace('block', 'hidden');
+            closeIcon?.classList.replace('hidden', 'block');
+            body.classList.add('menu-open');
+        }
+    }
+
+    menuBtn?.addEventListener('click', toggleMenu);
+
+    // Cerrar menú al hacer click en un link
+    document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if (mobileMenu?.classList.contains('opacity-100')) toggleMenu();
+        });
+    });
+
+    // Lógica de Modo Oscuro
+    const themeToggles = [document.getElementById('theme-toggle'), document.getElementById('theme-toggle-mobile')];
+    
+    themeToggles.forEach(toggle => {
+        toggle?.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    });
+</script>

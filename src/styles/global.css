@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #3b82f6;
+  --font-sans: "Inter", "system-ui", "sans-serif";
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Tus estilos personalizados */
+@utility logo-text {
+  font-weight: 900;
+  letter-spacing: -0.05em;
+}
+
+@utility dark-mode-transition {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.menu-open {
+  overflow: hidden;
+}
+
+.project-card:hover .project-icon {
+  transform: scale(1.1);
+  color: #3b82f6;
+}
+
+@utility featured-link {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px -5px rgba(0, 0, 0, 0.05);
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(59, 130, 246, 0.05),
+      rgba(59, 130, 246, 0.15),
+      rgba(59, 130, 246, 0.05),
+      transparent
+    );
+    transform: skewX(-25deg);
+    transition: 1.8s cubic-bezier(0.2, 0, 0.3, 1);
+  }
+
+  &:hover::after {
+    left: 150%;
+  }
+
+  &:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+}
+
+:where(.dark) .featured-link::after {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.03),
+    transparent
+  );
+}

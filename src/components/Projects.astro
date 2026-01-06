@@ -1,0 +1,25 @@
+---
+const projects = [
+  { title: "Iglesia CCER", desc: "Plataforma enfocada en la comunicación de eventos y visión institucional.", icon: "church" },
+  { title: "Salud Dr. Arvelo", desc: "Landing page profesional con sistema directo para agendamiento de citas.", icon: "stethoscope" },
+  { title: "Firma Legal García", desc: "Presencia digital sobria para firma legal, priorizando la autoridad y confianza.", icon: "gavel" }
+];
+---
+<section id="proyectos" class="max-w-6xl mx-auto px-6 pt-20 pb-12 md:pt-32 md:pb-16 border-t border-slate-100 dark:border-slate-800">
+    <div class="w-full text-center md:text-left mb-16">
+        <h2 class="text-4xl font-black tracking-tighter mb-4">Proyectos<span class="text-brand">.</span></h2>
+        <p class="text-slate-500 font-medium italic">Casos de estudio y soluciones estáticas implementadas.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        {projects.map(project => (
+            <div class="project-card group cursor-pointer">
+                <div class="aspect-video bg-slate-50 dark:bg-slate-900 rounded-3xl mb-6 overflow-hidden border border-slate-100 dark:border-slate-800 flex items-center justify-center">
+                    <i data-lucide={project.icon} class="project-icon w-12 h-12 text-slate-200 dark:text-slate-800 transition-all duration-300"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">{project.title}</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">{project.desc}</p>
+            </div>
+        ))}
+    </div>
+</section>

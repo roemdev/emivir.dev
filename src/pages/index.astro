@@ -1,16 +1,25 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import Solutions from '../components/Solutions.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout 
+    title="emivir.dev | Presencia Digital con Propósito" 
+    description="Soluciones web estáticas diseñadas para profesionales y organizaciones sociales."
+>
+	<Navbar />
+	<main class="pt-20">
+		<Hero />
+		<Features />
+		<Solutions />
+		<Projects />
+		<Contact />
+	</main>
+	<Footer />
+</BaseLayout>

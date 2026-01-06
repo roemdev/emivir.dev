@@ -1,0 +1,115 @@
+---
+import '../styles/global.css';
+const { title, description } = Astro.props;
+---
+
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "ProfessionalService",
+				"name": "emivir.dev",
+				"image": "https://emivir.dev/og-image.png",
+				"url": "https://emivir.dev",
+				"address": {
+					"@type": "PostalAddress",
+					"addressLocality": "Tu Ciudad",
+					"addressCountry": "Tu País"
+				},
+				"description": "Soluciones web estáticas diseñadas para profesionales y organizaciones sociales.",
+				"founder": {
+					"@type": "Person",
+					"name": "Tu Nombre"
+				}
+			}
+		</script>
+
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Emivir",
+				"url": "https://emivir.dev",
+				"sameAs": [
+					"https://github.com/roemdev",
+					"https://x.com/roemdev"
+				],
+				"jobTitle": "Desarrollador Web",
+				"description": "Especialista en desarrollo web estático y optimización de presencia digital."
+			}
+		</script>
+
+    <script is:inline>
+      const theme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+        return 'light';
+      })();
+    
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+  </head>
+  <body class="bg-white text-slate-900 dark:bg-[#0a0a0a] dark:text-slate-100 dark-mode-transition">
+    <slot />
+    
+    <script>
+      // Importación corregida con nombres válidos para el módulo de Lucide
+      import { 
+        createIcons, 
+        Moon, 
+        Sun, 
+        Menu, 
+        X, 
+        Award, 
+        HeartHandshake, 
+        Church, 
+        Stethoscope, 
+        Gavel, 
+        Mail, 
+        MessageCircle, 
+        Code2, 
+        Home, 
+        ArrowRight, 
+        ExternalLink 
+      } from 'lucide';
+      
+      // Inicialización corregida
+      createIcons({
+        icons: { 
+          Moon, 
+          Sun, 
+          Menu, 
+          X, 
+          Award, 
+          HeartHandshake, 
+          Church, 
+          Stethoscope, 
+          Gavel, 
+          Mail, 
+          MessageCircle, 
+          Code2, 
+          Home, 
+          ArrowRight, 
+          ExternalLink 
+        }
+      });
+    </script>
+  </body>
+</html>

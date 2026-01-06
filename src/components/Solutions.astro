@@ -1,0 +1,30 @@
+---
+const solutions = [
+  {
+    icon: "award",
+    title: "Profesionales",
+    description: "Creamos espacios limpios que transmiten la seriedad y el rigor de tu práctica profesional. Tu web como tu mejor tarjeta de presentación."
+  },
+  {
+    icon: "heart-handshake",
+    title: "Impacto Social",
+    description: "Sitios que maximizan tu visibilidad con costos operativos mínimos, permitiendo que tus recursos lleguen a donde más se necesitan."
+  }
+];
+---
+<section id="soluciones" class="max-w-6xl mx-auto px-6 py-20 md:py-32 border-t border-slate-100 dark:border-slate-800">
+    <div class="mb-16">
+        <h2 class="text-4xl font-black tracking-tighter mb-4 text-center md:text-left">Áreas de enfoque<span class="text-brand">.</span></h2>
+        <p class="text-slate-500 font-medium max-w-lg mx-auto md:mx-0 text-center md:text-left">Soluciones diseñadas específicamente para sectores que requieren confianza y durabilidad.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+        {solutions.map(item => (
+            <div class="p-10 md:p-12 rounded-[2.5rem] bg-slate-50/50 dark:bg-[#0f0f0f] border border-slate-100 dark:border-slate-800 hover:border-brand transition-all group">
+                <div class="mb-8"><i data-lucide={item.icon} class="w-10 h-10 text-brand"></i></div>
+                <h3 class="text-2xl font-black mb-4">{item.title}</h3>
+                <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">{item.description}</p>
+            </div>
+        ))}
+    </div>
+</section>
