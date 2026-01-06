@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://roemdev.github.io',
-  base: '/roemdev', 
+  base: '/emivir.dev', 
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
