@@ -10,7 +10,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="min-h-screen flex flex-col bg-white text-slate-900 dark:bg-[#0a0a0a] dark:text-slate-100 dark-mode-transition">
         <header class="w-full max-w-xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="logo-text text-xl">
-                <a href="/" class="hover:opacity-80 transition-opacity">emivir<span class="text-brand">.</span>dev</a>
+                <a href={import.meta.env.BASE_URL} class="hover:opacity-80 transition-opacity">emivir<span class="text-brand">.</span>dev</a>
             </div>
             
             <button id="theme-toggle-links" class="p-2.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Cambiar tema">
@@ -36,7 +36,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
             <div class="w-full space-y-3">
                 
-                <a href={import.meta.env.BASE_URL + "/"} class="featured-link flex items-center gap-4 p-4 bg-slate-50 dark:bg-[#0f0f0f] border border-slate-100 dark:border-slate-800 rounded-2xl group transition-all active:scale-[0.97]">
+                <a href={import.meta.env.BASE_URL} class="featured-link flex items-center gap-4 p-4 bg-slate-50 dark:bg-[#0f0f0f] border border-slate-100 dark:border-slate-800 rounded-2xl group transition-all active:scale-[0.97]">
                     <div class="w-10 h-10 bg-brand/10 rounded-xl flex items-center justify-center">
                         <i data-lucide="home" class="w-5 h-5 text-brand"></i>
                     </div>
