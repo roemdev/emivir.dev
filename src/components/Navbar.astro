@@ -5,7 +5,7 @@
 <header class="fixed top-0 left-0 w-full z-[100] bg-white/80 dark:bg-[#0a0a0a]/80 backdrop-blur-md border-b border-slate-100 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-6 h-20 grid grid-cols-2 md:grid-cols-3 items-center">
         <div class="logo-text text-2xl z-[110]">
-            <a href="/">emivir<span class="text-brand">.</span>dev</a>
+            <a href={import.meta.env.BASE_URL}>emivir<span class="text-brand">.</span>dev</a>
         </div>
         
         <div class="hidden md:flex justify-center">
@@ -17,7 +17,7 @@
 
         <div class="flex justify-end items-center space-x-2 md:space-x-4">
             <nav class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-widest">
-                <a href="/links" class="hover:text-brand transition-colors">Enlaces</a>
+                <a href={import.meta.env.BASE_URL + "/links"} class="hover:text-brand transition-colors">Enlaces</a>
             </nav>
 
             <button id="theme-toggle-mobile" class="flex md:hidden p-2.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Cambiar tema móvil">
@@ -35,7 +35,7 @@
 
 <div id="mobile-menu" class="fixed inset-0 z-[90] bg-white dark:bg-[#0a0a0a] opacity-0 pointer-events-none translate-y-[-10px] flex flex-col justify-center items-center transition-all duration-300">
     <div class="flex flex-col items-center space-y-12 text-3xl font-black tracking-tighter">
-        <a href={import.meta.env.BASE_URL + "links"} class="mobile-link hover:text-brand transition-colors">Enlaces<span class="text-brand">.</span></a>
+        <a href={import.meta.env.BASE_URL + "/links"} class="mobile-link hover:text-brand transition-colors">Enlaces<span class="text-brand">.</span></a>
     </div>
 </div>
 
