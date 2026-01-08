@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO CRÍTICO -->
+    <title>Centro Cristiano El Redentor | Comunidad de Fe en Santiago, RD</title>
+    <meta name="description" content="Centro Cristiano El Redentor (CCER). Una comunidad solemne dedicada al estudio bíblico y la adoración en Santiago, República Dominicana.">
+    <meta name="keywords" content="Iglesia Santiago RD, CCER, El Redentor, Centro Cristiano, servicios religiosos dominicanos, clase bíblica Santiago, fe cristiana">
+    
+    <!-- JSON-LD SCHEMA (SEO Local) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Church",
+      "name": "Centro Cristiano El Redentor",
+      "alternateName": "CCER",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Santiago",
+        "addressRegion": "Santiago",
+        "addressCountry": "DO"
+      },
+      "url": "https://elredentorcc.org/",
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "19:30", "closes": "21:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:30", "closes": "12:00" }
+      ]
+    }
+    </script>
+
+    <!-- FUENTES: Plus Jakarta Sans (Base) & Fraunces (Elegante/Caligráfica) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,300;1,9..144,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --dark: #0a1128;
+            --accent: #1e3a8a;
+            --accent-light: #3b82f6;
+            --accent-gradient: linear-gradient(135deg, #0a1128 0%, #1e3a8a 50%, #3b82f6 100%);
+            --soft-white: #fcfcfc;
+        }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--soft-white);
+            color: var(--dark);
+        }
+        h1, h2, h3, h4, .serif { 
+            font-family: 'Fraunces', serif; 
+            letter-spacing: -0.01em;
+        }
+        
+        .accent-text {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .accent-border {
+            border-color: var(--accent);
+        }
+
+        .fade-in { animation: fadeIn 1.2s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .nav-dock {
+            background: rgba(252, 252, 252, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(10, 17, 40, 0.05);
+        }
+
+        .hero-mask {
+            background: linear-gradient(to bottom, rgba(10, 17, 40, 0.4), rgba(252, 252, 252, 1));
+        }
+
+        .text-balance { text-wrap: balance; }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--soft-white); }
+        ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- NAV DOCK -->
+    <nav class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-lg">
+        <div class="nav-dock rounded-3xl px-6 py-4 flex justify-between items-center shadow-[0_20px_40px_rgba(0,0,0,0.06)]">
+            <a href="#inicio" class="text-[--dark] font-bold tracking-tighter text-sm serif italic hover:text-[--accent] transition">CCER</a>
+            <div class="flex space-x-4">
+                <a href="#vision" class="text-[9px] uppercase tracking-[0.2em] font-bold text-slate-400 hover:text-[--dark] transition">Visión</a>
+                <a href="#ministerios" class="text-[9px] uppercase tracking-[0.2em] font-bold text-slate-400 hover:text-[--dark] transition">Ministerios</a>
+                <a href="#liderazgo" class="text-[9px] uppercase tracking-[0.2em] font-bold text-slate-400 hover:text-[--dark] transition">Liderazgo</a>
+                <a href="#horarios" class="text-[9px] uppercase tracking-[0.2em] font-bold text-slate-400 hover:text-[--dark] transition">Horarios</a>
+            </div>
+            <a href="https://wa.me/18095551234" class="text-[--accent] hover:scale-110 transition">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header id="inicio" class="relative h-screen flex items-center justify-center bg-white">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&q=80&w=1920" 
+                 class="w-full h-full object-cover grayscale opacity-25" alt="Iglesia solemne">
+            <div class="absolute inset-0 hero-mask"></div>
+        </div>
+        <div class="relative z-10 text-center px-6 fade-in">
+            <div class="mb-8 inline-block">
+                <div class="w-12 h-[1px] bg-[--accent] mx-auto mb-2 opacity-30"></div>
+                <span class="text-[--accent] uppercase tracking-[0.5em] text-[10px] font-bold">Santiago, República Dominicana</span>
+            </div>
+            <h1 class="text-6xl md:text-9xl text-[--dark] mb-6 font-light leading-none">
+                El <span class="italic serif accent-text font-semibold">Redentor</span>
+            </h1>
+            <p class="text-slate-500 max-w-lg mx-auto text-sm md:text-xl font-light tracking-wide leading-relaxed text-balance">
+                Una comunidad fundamentada en la <span class="text-[--dark] font-medium">sana doctrina</span> y la gracia de Cristo.
+            </p>
+            <div class="mt-12 flex flex-col items-center gap-6">
+                <a href="#visita" class="bg-[--dark] text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-bold hover:bg-[--accent] transition shadow-xl">
+                    Planifica tu visita
+                </a>
+                <a href="#vision" class="text-[10px] uppercase tracking-[0.3em] text-slate-400 hover:text-[--accent] transition flex flex-col items-center gap-2">
+                    Conócenos
+                    <i data-lucide="chevron-down" class="w-4 h-4 animate-bounce"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- VALORES (Sección nueva para más información) -->
+    <section class="py-24 bg-white px-6">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center p-8 space-y-4">
+                    <i data-lucide="book-open" class="w-8 h-8 text-[--accent] mx-auto opacity-40"></i>
+                    <h4 class="serif italic text-xl">Bíblica</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light">Nuestra única regla de fe y conducta son las Escrituras.</p>
+                </div>
+                <div class="text-center p-8 space-y-4">
+                    <i data-lucide="heart" class="w-8 h-8 text-[--accent] mx-auto opacity-40"></i>
+                    <h4 class="serif italic text-xl">Familiar</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light">Un lugar donde cada generación encuentra pertenencia.</p>
+                </div>
+                <div class="text-center p-8 space-y-4">
+                    <i data-lucide="shield" class="w-8 h-8 text-[--accent] mx-auto opacity-40"></i>
+                    <h4 class="serif italic text-xl">Solemne</h4>
+                    <h3 class="hidden">Centro Cristiano El Redentor Valores</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light">Adoración centrada en la reverencia a la majestad de Dios.</p>
+                </div>
+                <div class="text-center p-8 space-y-4">
+                    <i data-lucide="compass" class="w-8 h-8 text-[--accent] mx-auto opacity-40"></i>
+                    <h4 class="serif italic text-xl">Misionera</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light">Comprometidos con el impacto de nuestra ciudad Santiago.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISIÓN Y MISIÓN -->
+    <section id="vision" class="py-32 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-24 items-center">
+                <div class="relative group">
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-[--accent-light] opacity-5 rounded-full blur-3xl"></div>
+                    <img src="https://images.unsplash.com/photo-1515162305285-0293e4767cc2?auto=format&fit=crop&q=80&w=1000" 
+                         class="rounded-2xl shadow-xl grayscale transition hover:grayscale-0 duration-1000 z-10 relative" alt="Iglesia Santiago">
+                    
+                    <!-- Cuadro Corregido -->
+                    <div class="absolute bottom-4 right-4 md:-bottom-6 md:-right-6 p-6 bg-[--dark] text-white rounded-xl z-20 shadow-2xl border-l-4 border-[--accent-light] max-w-[200px]">
+                        <p class="serif italic text-sm leading-relaxed">"Gracia abundante para tiempos de cambio."</p>
+                    </div>
+                </div>
+                <div class="space-y-8">
+                    <h2 class="text-4xl md:text-6xl text-slate-900 leading-tight">Nuestra <span class="italic serif accent-text font-medium">Esencia</span></h2>
+                    <p class="text-slate-500 text-lg leading-relaxed font-light">
+                        El Centro Cristiano El Redentor nace con el propósito de ser un faro de luz en Santiago, República Dominicana. No somos solo un edificio, somos una comunidad que busca vivir el Evangelio en su plenitud.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="p-8 bg-white border border-slate-200 rounded-2xl group hover:border-[--accent] transition-all">
+                            <h4 class="font-bold text-xs uppercase tracking-[0.3em] mb-4 text-[--accent]">Visión</h4>
+                            <p class="text-slate-600 font-light italic">"Ser una iglesia que glorifica a Dios a través de vidas transformadas por el poder de Su Palabra."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANIFICA TU VISITA (Nueva sección de relevancia) -->
+    <section id="visita" class="py-32 bg-white px-6">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto text-center mb-20">
+                <span class="text-[--accent] text-[10px] font-bold uppercase tracking-[0.4em] mb-4 block">Próximos Pasos</span>
+                <h2 class="text-4xl md:text-5xl serif italic">Planifica tu Visita</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+                <div class="space-y-4">
+                    <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-[--accent] font-bold serif italic">1</div>
+                    <h4 class="text-xl italic serif">Ubicación</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed font-light italic">Estamos en una zona accesible de Santiago con amplio parqueo vigilado para tu tranquilidad.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-[--accent] font-bold serif italic">2</div>
+                    <h4 class="text-xl italic serif">Recepción</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed font-light italic">Al llegar, nuestro equipo de bienvenida te guiará y responderá cualquier duda sobre el servicio.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-[--accent] font-bold serif italic">3</div>
+                    <h4 class="text-xl italic serif">Integración</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed font-light italic">Al terminar, te invitamos a un café en nuestro salón de comunión para conocernos mejor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MINISTERIOS -->
+    <section id="ministerios" class="py-32 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl serif italic">Ministerios Activos</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 group hover:border-[--accent] transition-all duration-500">
+                    <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[--accent] transition">
+                        <i data-lucide="baby" class="text-[--accent] w-6 h-6 group-hover:text-white transition"></i>
+                    </div>
+                    <h4 class="text-xl mb-4 italic group-hover:text-[--accent] transition">Redentor Kids</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed font-light">Enseñanza bíblica creativa para formar el carácter de los niños en Cristo.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 group hover:border-[--accent] transition-all duration-500">
+                    <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[--accent] transition">
+                        <i data-lucide="zap" class="text-[--accent] w-6 h-6 group-hover:text-white transition"></i>
+                    </div>
+                    <h4 class="text-xl mb-4 italic group-hover:text-[--accent] transition">Legado Joven</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed font-light">Espacio para jóvenes que buscan respuestas bíblicas a los retos de hoy.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 group hover:border-[--accent] transition-all duration-500">
+                    <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[--accent] transition">
+                        <i data-lucide="users" class="text-[--accent] w-6 h-6 group-hover:text-white transition"></i>
+                    </div>
+                    <h4 class="text-xl mb-4 italic group-hover:text-[--accent] transition">Células de Hogar</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed font-light">Grupos pequeños durante la semana para el estudio y la oración mutua.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIDERAZGO (Nueva sección para robustecer) -->
+    <section id="liderazgo" class="py-32 bg-white px-6">
+        <div class="container mx-auto">
+            <div class="grid lg:grid-cols-2 gap-20 items-center max-w-6xl mx-auto">
+                <div>
+                    <span class="text-[--accent] text-[10px] font-bold uppercase tracking-[0.4em] mb-4 block">Nuestros Pastores</span>
+                    <h2 class="text-4xl md:text-5xl mb-8 serif italic">Liderazgo Comprometido</h2>
+                    <p class="text-slate-500 font-light leading-loose mb-8">
+                        Contamos con un equipo de ancianos y pastores dedicados al cuidado del rebaño y a la enseñanza fiel de las Escrituras. Creemos en un liderazgo de servicio, humildad y transparencia.
+                    </p>
+                    <div class="flex items-center gap-6">
+                        <div class="w-16 h-16 rounded-full bg-slate-200 overflow-hidden grayscale">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150" alt="Pastor">
+                        </div>
+                        <div>
+                            <p class="font-bold serif italic text-lg">Cuerpo de Ancianos</p>
+                            <p class="text-[10px] uppercase tracking-widest text-slate-400">CCER Santiago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="h-64 bg-slate-100 rounded-2xl overflow-hidden grayscale opacity-60 hover:opacity-100 transition duration-700">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover" alt="Liderazgo">
+                    </div>
+                    <div class="h-64 bg-slate-100 rounded-2xl overflow-hidden grayscale opacity-60 hover:opacity-100 transition duration-700 mt-12">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover" alt="Liderazgo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HORARIOS -->
+    <section id="horarios" class="py-32 bg-white text-[--dark]">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+                    <div class="space-y-4">
+                        <h3 class="text-5xl md:text-7xl italic serif font-semibold accent-text">Tiempos de Gracia</h3>
+                        <p class="text-slate-400 max-w-sm text-base font-light">Encuentros diseñados para tu edificación espiritual.</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-px bg-slate-100 border border-slate-200 rounded-3xl overflow-hidden shadow-sm">
+                    <div class="p-12 bg-white hover:bg-slate-50 transition duration-700 group">
+                        <span class="text-[--accent] text-[10px] font-bold tracking-[0.3em] uppercase block mb-6">Miércoles</span>
+                        <h4 class="text-3xl mb-4 serif italic">Clase Bíblica</h4>
+                        <div class="flex items-center gap-2 text-[--accent] mb-6">
+                            <i data-lucide="clock" class="w-4 h-4"></i>
+                            <span class="text-lg font-light">7:30 PM — 9:00 PM</span>
+                        </div>
+                        <p class="text-sm text-slate-500 font-light leading-relaxed">Estudio sistemático donde profundizamos en la doctrina y la aplicación práctica de la fe.</p>
+                    </div>
+                    <div class="p-12 bg-white hover:bg-slate-50 transition duration-700 group border-t md:border-t-0 md:border-l border-slate-200">
+                        <span class="text-[--accent] text-[10px] font-bold tracking-[0.3em] uppercase block mb-6">Domingos</span>
+                        <h4 class="text-3xl mb-4 serif italic text-balance">Servicio de Adoración</h4>
+                        <div class="flex items-center gap-2 text-[--accent] mb-6">
+                            <i data-lucide="clock" class="w-4 h-4"></i>
+                            <span class="text-lg font-light">9:30 AM — 12:00 PM</span>
+                        </div>
+                        <p class="text-sm text-slate-500 font-light leading-relaxed">Nuestro encuentro principal de alabanza congregacional, oración y predicación expositiva.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-32 bg-slate-50 px-6 border-y border-slate-100">
+        <div class="container mx-auto max-w-3xl">
+            <h3 class="text-3xl md:text-4xl text-center mb-16 serif italic">Preguntas Comunes</h3>
+            <div class="space-y-6">
+                <details class="bg-white rounded-2xl border border-slate-100 group">
+                    <summary class="p-8 cursor-pointer list-none flex justify-between items-center">
+                        <span class="serif text-lg text-[--dark] font-semibold">¿Qué esperar de mi primera visita?</span>
+                        <i data-lucide="plus" class="w-4 h-4 text-[--accent] group-open:rotate-45 transition"></i>
+                    </summary>
+                    <div class="px-8 pb-8 text-sm text-slate-500 font-light leading-relaxed">
+                        Encontrarás una comunidad acogedora y un ambiente de orden. El servicio incluye música de adoración, lectura bíblica y un mensaje centrado en la persona de Cristo.
+                    </div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 group">
+                    <summary class="p-8 cursor-pointer list-none flex justify-between items-center">
+                        <span class="serif text-lg text-[--dark] font-semibold">¿Tienen clases para mis hijos?</span>
+                        <i data-lucide="plus" class="w-4 h-4 text-[--accent] group-open:rotate-45 transition"></i>
+                    </summary>
+                    <div class="px-8 pb-8 text-sm text-slate-500 font-light leading-relaxed">
+                        Sí, contamos con Redentor Kids, un programa diseñado para niños donde aprenden historias bíblicas de forma dinámica mientras los adultos asisten al servicio.
+                    </div>
+                </details>
+                <details class="bg-white rounded-2xl border border-slate-100 group">
+                    <summary class="p-8 cursor-pointer list-none flex justify-between items-center">
+                        <span class="serif text-lg text-[--dark] font-semibold">¿Necesito vestirme de forma formal?</span>
+                        <i data-lucide="plus" class="w-4 h-4 text-[--accent] group-open:rotate-45 transition"></i>
+                    </summary>
+                    <div class="px-8 pb-8 text-sm text-slate-500 font-light leading-relaxed">
+                        No. Valoramos más tu presencia y disposición que tu vestimenta. Muchos asisten de forma casual o semiformal, siéntete cómodo entre nosotros.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- UBICACIÓN -->
+    <section id="ubicacion" class="py-32 bg-white px-6">
+        <div class="container mx-auto">
+            <div class="max-w-6xl mx-auto grid lg:grid-cols-3 gap-16 items-center">
+                <div class="space-y-8">
+                    <span class="text-[--accent] text-[10px] font-bold tracking-[0.4em] uppercase">Sede Santiago</span>
+                    <h2 class="text-4xl md:text-5xl serif italic">Visítanos</h2>
+                    <p class="text-slate-500 text-sm leading-relaxed font-light">
+                        Ubicados en el corazón de Santiago de los Caballeros. Nuestra sede es un espacio de paz y encuentro para toda la familia dominicana.
+                    </p>
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center gap-4 text-slate-600">
+                            <i data-lucide="mail" class="w-5 h-5 text-[--accent]"></i>
+                            <span class="text-sm italic">hola@elredentorcc.org</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-slate-600">
+                            <i data-lucide="phone" class="w-5 h-5 text-[--accent]"></i>
+                            <span class="text-sm italic">+1 (809) 555-1234</span>
+                        </div>
+                    </div>
+                    <a href="https://goo.gl/maps/xyz" class="inline-block bg-[--dark] text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-bold hover:bg-[--accent] transition shadow-lg">
+                        Ver en el Mapa
+                    </a>
+                </div>
+                <div class="lg:col-span-2 rounded-3xl overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] border border-slate-100 h-[450px]">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120359.7360057962!2d-70.75841441865913!3d19.455018659220042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eb1cf615170d10d%3A0xc077227e57c4c312!2sSantiago%20de%20los%20Caballeros!5e0!3m2!1ses!2sdo!4v1700000000000!5m2!1ses!2sdo" 
+                        class="w-full h-full border-0 grayscale opacity-60 contrast-125" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white pt-24 pb-32 px-6 border-t border-slate-50">
+        <div class="container mx-auto text-center">
+            <div class="serif text-3xl tracking-tighter text-[--dark] mb-8 italic">CCER</div>
+            <div class="flex justify-center gap-10 mb-12 opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition duration-500">
+                <i data-lucide="instagram" class="w-5 h-5 cursor-pointer hover:text-[--accent]"></i>
+                <i data-lucide="facebook" class="w-5 h-5 cursor-pointer hover:text-[--accent]"></i>
+                <i data-lucide="youtube" class="w-5 h-5 cursor-pointer hover:text-[--accent]"></i>
+            </div>
+            <p class="text-[10px] text-slate-400 uppercase tracking-[0.3em] mb-4">© <span id="year"></span> Centro Cristiano El Redentor Santiago</p>
+            <div class="pt-8 opacity-40">
+                <a href="https://emivir.dev" target="_blank" class="text-[9px] uppercase tracking-[0.5em] font-medium text-slate-800 hover:text-[--accent] transition">
+                    powered by emivir.dev
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Nav Dock Behavior
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > lastScroll && currentScroll > 300) {
+                nav.style.transform = 'translate(-50%, 150%)';
+                nav.style.opacity = '0';
+            } else {
+                nav.style.transform = 'translate(-50%, 0)';
+                nav.style.opacity = '1';
+            }
+            nav.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
