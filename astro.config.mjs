@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://emivir-dev.vercel.app',
-  base: 'emivir-dev.vercel.app', 
+  base: '/', 
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
