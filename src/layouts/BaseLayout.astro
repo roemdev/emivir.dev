@@ -84,49 +84,6 @@ const { title, description } = Astro.props;
   <body class="bg-white text-slate-900 dark:bg-[#0a0a0a] dark:text-slate-100 dark-mode-transition">
     <slot />
     
-    <script>
-      // Importación corregida con nombres válidos para el módulo de Lucide
-      import { 
-        createIcons, 
-        Moon, 
-        Sun, 
-        Menu, 
-        X, 
-        Award, 
-        HeartHandshake, 
-        Church, 
-        Stethoscope, 
-        Gavel, 
-        Mail, 
-        MessageCircle, 
-        Code2, 
-        Home, 
-        ArrowRight, 
-        ExternalLink 
-      } from 'lucide';
-      
-      // Inicialización corregida
-      createIcons({
-        icons: { 
-          Moon, 
-          Sun, 
-          Menu, 
-          X, 
-          Award, 
-          HeartHandshake, 
-          Church, 
-          Stethoscope, 
-          Gavel, 
-          Mail, 
-          MessageCircle, 
-          Code2, 
-          Home, 
-          ArrowRight, 
-          ExternalLink 
-        }
-      });
-    </script>
-
     <SpeedInsights />
   </body>
 </html>

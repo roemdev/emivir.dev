@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 // Aquí podrías recibir props si quisieras que el menú fuera dinámico
 ---
 
@@ -10,8 +11,8 @@
         
         <div class="hidden md:flex justify-center">
             <button id="theme-toggle" class="p-2.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border border-transparent hover:border-slate-200 dark:hover:border-slate-700" aria-label="Cambiar tema">
-                <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
-                <i data-lucide="sun" class="w-5 h-5 hidden dark:block text-brand"></i>
+                <Icon name="moon" class="w-5 h-5 dark:hidden" />
+                <Icon name="sun" class="w-5 h-5 hidden dark:block text-brand" />
             </button>
         </div>
 
@@ -21,13 +22,13 @@
             </nav>
 
             <button id="theme-toggle-mobile" class="flex md:hidden p-2.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Cambiar tema móvil">
-                <i data-lucide="moon" class="w-6 h-6 dark:hidden text-slate-900"></i>
-                <i data-lucide="sun" class="w-6 h-6 hidden dark:block text-brand"></i>
+                <Icon name="moon" class="w-6 h-6 dark:hidden text-slate-900" />
+                <Icon name="sun" class="w-6 h-6 hidden dark:block text-brand" />
             </button>
 
             <button id="menu-btn" class="md:hidden z-[110] p-2 focus:outline-none" aria-label="Menú">
-                <i data-lucide="menu" id="menu-icon" class="w-7 h-7 block transition-transform"></i>
-                <i data-lucide="x" id="close-icon" class="w-7 h-7 hidden transition-transform"></i>
+                <Icon name="menu" id="menu-icon" class="w-7 h-7 block transition-transform" />
+                <Icon name="x" id="close-icon" class="w-7 h-7 hidden transition-transform" />
             </button>
         </div>
     </div>
