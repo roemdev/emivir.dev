@@ -16,8 +16,7 @@ const toPascalCase = (str: string) =>
 
 const iconName = toPascalCase(name);
 
-// @ts-ignore
-const iconData = lucide[iconName];
+const iconData = lucide[iconName as keyof typeof lucide];
 
 if (!iconData) {
   console.warn(`[Icon.astro] Icon "${name}" not found in lucide.`);
