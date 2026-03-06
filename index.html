@@ -1,0 +1,693 @@
+<!doctype html>
+<html class="scroll-smooth" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width" name="viewport" />
+    <title>emivir.dev | Presencia Digital con Propósito</title>
+    <meta
+      content="Soluciones web estáticas diseñadas para profesionales y organizaciones sociales."
+      name="description"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
+    <meta content="website" property="og:type" />
+    <meta content="https://emivir.dev/" property="og:url" />
+    <meta
+      content="emivir.dev | Presencia Digital con Propósito"
+      property="og:title"
+    />
+    <meta
+      content="Soluciones web estáticas diseñadas para profesionales y organizaciones sociales."
+      property="og:description"
+    />
+    <meta content="https://emivir.dev/og-image.png" property="og:image" />
+    <meta content="summary_large_image" property="twitter:card" />
+    <meta content="https://emivir.dev/" property="twitter:url" />
+    <meta
+      content="emivir.dev | Presencia Digital con Propósito"
+      property="twitter:title"
+    />
+    <meta
+      content="Soluciones web estáticas diseñadas para profesionales y organizaciones sociales."
+      property="twitter:description"
+    />
+    <meta content="https://emivir.dev/og-image.png" property="twitter:image" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "emivir.dev",
+        "image": "https://emivir.dev/og-image.png",
+        "url": "https://emivir.dev",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tu Ciudad",
+          "addressCountry": "Tu País"
+        },
+        "description": "Soluciones web estáticas diseñadas para profesionales y organizaciones sociales.",
+        "founder": {
+          "@type": "Person",
+          "name": "Tu Nombre"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Emivir",
+        "url": "https://emivir.dev",
+        "sameAs": ["https://github.com/roemdev", "https://x.com/roemdev"],
+        "jobTitle": "Desarrollador Web",
+        "description": "Especialista en desarrollo web estático y optimización de presencia digital."
+      }
+    </script>
+    <link href="/css/styles.css" rel="stylesheet" />
+    <script defer src="/js/main.js"></script>
+  </head>
+  <body
+    class="bg-white text-slate-900 dark:bg-[#0a0a0a] dark:text-slate-100 dark-mode-transition"
+  >
+    <header
+      class="fixed top-0 left-0 w-full z-[100] bg-white/80 dark:bg-[#0a0a0a]/80 backdrop-blur-md border-b border-slate-100 dark:border-slate-800"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 h-20 grid grid-cols-2 md:grid-cols-3 items-center"
+      >
+        <div class="logo-text text-2xl z-[110]">
+          <a href="/">emivir<span class="text-brand">.</span>dev</a>
+        </div>
+        <div class="hidden md:flex justify-center">
+          <button
+            aria-label="Cambiar tema"
+            class="p-2.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border border-transparent hover:border-slate-200 dark:hover:border-slate-700"
+            id="theme-toggle"
+          >
+            <svg
+              class="w-5 h-5 dark:hidden"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"
+              ></path>
+            </svg>
+            <svg
+              class="w-5 h-5 hidden dark:block text-brand"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex justify-end items-center space-x-2 md:space-x-4">
+          <nav
+            class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-widest"
+          >
+            <a
+              class="hover:text-brand transition-colors"
+              href="https://emivir-dev.vercel.app/links"
+              >Enlaces</a
+            >
+          </nav>
+          <button
+            aria-label="Cambiar tema móvil"
+            class="flex md:hidden p-2.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            id="theme-toggle-mobile"
+          >
+            <svg
+              class="w-6 h-6 dark:hidden text-slate-900"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"
+              ></path>
+            </svg>
+            <svg
+              class="w-6 h-6 hidden dark:block text-brand"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+          </button>
+          <button
+            aria-label="Menú"
+            class="md:hidden z-[110] p-2 focus:outline-none"
+            id="menu-btn"
+          >
+            <svg
+              class="w-7 h-7 block transition-transform"
+              fill="none"
+              height="24"
+              id="menu-icon"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M4 5h16"></path>
+              <path d="M4 12h16"></path>
+              <path d="M4 19h16"></path>
+            </svg>
+            <svg
+              class="w-7 h-7 hidden transition-transform"
+              fill="none"
+              height="24"
+              id="close-icon"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div
+      class="fixed inset-0 z-[90] bg-white dark:bg-[#0a0a0a] opacity-0 pointer-events-none translate-y-[-10px] flex flex-col justify-center items-center transition-all duration-300"
+      id="mobile-menu"
+    >
+      <div
+        class="flex flex-col items-center space-y-12 text-3xl font-black tracking-tighter"
+      >
+        <a class="mobile-link hover:text-brand transition-colors" href="/links"
+          >Enlaces<span class="text-brand">.</span></a
+        >
+      </div>
+    </div>
+    <main class="pt-20">
+      <section class="max-w-6xl mx-auto px-6 py-20 md:py-15">
+        <div class="max-w-4xl">
+          <h1
+            class="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-10"
+          >
+            Presencia digital<span class="text-brand">.</span><br />
+            Cercana<span class="text-brand">.</span><br />
+            Estable<span class="text-brand">.</span>
+          </h1>
+          <p
+            class="text-lg md:text-2xl text-slate-600 dark:text-slate-400 mb-12 leading-relaxed max-w-2xl font-medium"
+          >
+            Acompaño a profesionales y organizaciones en la creación de espacios
+            digitales que priorizan la estabilidad y el valor real<span
+              class="text-brand"
+              >.</span
+            >
+            Sin complicaciones innecesarias.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center gap-6">
+            <a
+              class="w-full sm:w-auto flex items-center justify-center gap-3 bg-slate-900 dark:bg-slate-100 dark:text-slate-900 text-white px-8 py-4 md:px-10 md:py-5 rounded-2xl font-black text-lg hover:scale-[1.02] transition-all"
+              href="#soluciones"
+            >
+              Explorar soluciones
+            </a>
+            <span
+              class="text-xs md:text-sm font-bold text-slate-400 uppercase tracking-widest text-center sm:text-left"
+            >
+              Tecnología con sentido humano
+            </span>
+          </div>
+        </div>
+      </section>
+      <section
+        class="max-w-6xl mx-auto px-6 py-20 md:py-24 border-t border-slate-100 dark:border-slate-800"
+        id="sobre-mi"
+      >
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+          <div class="lg:col-span-7 space-y-8">
+            <h2 class="text-4xl font-black tracking-tighter">
+              Honestidad técnica<span class="text-brand">.</span>
+            </h2>
+            <p
+              class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed"
+            >
+              Entiendo la web como una extensión de tu trabajo profesional. Mi
+              enfoque no se basa en lo que está de moda, sino en lo que es
+              funcional y duradero para ti.
+            </p>
+            <p
+              class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed"
+            >
+              Al integrar herramientas de inteligencia artificial en mi proceso,
+              puedo centrar mis esfuerzos en lo más importante: entender tus
+              necesidades y asegurar que tu inversión digital sea eficiente y
+              transparente desde el primer día.
+            </p>
+          </div>
+          <div class="lg:col-span-5 grid grid-cols-1 gap-8">
+            <div
+              class="border-l-2 border-slate-100 dark:border-slate-800 pl-6 md:pl-8 py-2"
+            >
+              <span
+                class="text-brand font-black text-xs md:text-sm uppercase tracking-widest block mb-2"
+              >
+                01. Estabilidad
+              </span>
+              <p class="text-slate-500 text-sm">
+                Mantenimiento enfocado en que tu sitio esté siempre en línea,
+                sin importar el tráfico.
+              </p>
+            </div>
+            <div
+              class="border-l-2 border-slate-100 dark:border-slate-800 pl-6 md:pl-8 py-2"
+            >
+              <span
+                class="text-brand font-black text-xs md:text-sm uppercase tracking-widest block mb-2"
+              >
+                02. Optimización
+              </span>
+              <p class="text-slate-500 text-sm">
+                Arquitecturas estáticas que eliminan la fricción y cargan de
+                forma instantánea.
+              </p>
+            </div>
+            <div
+              class="border-l-2 border-slate-100 dark:border-slate-800 pl-6 md:pl-8 py-2"
+            >
+              <span
+                class="text-brand font-black text-xs md:text-sm uppercase tracking-widest block mb-2"
+              >
+                03. Cercanía
+              </span>
+              <p class="text-slate-500 text-sm">
+                Soporte directo y comunicación clara. Sin tecnicismos vacíos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="max-w-6xl mx-auto px-6 py-20 md:py-32 border-t border-slate-100 dark:border-slate-800"
+        id="soluciones"
+      >
+        <div class="mb-16">
+          <h2
+            class="text-4xl font-black tracking-tighter mb-4 text-center md:text-left"
+          >
+            Áreas de enfoque<span class="text-brand">.</span>
+          </h2>
+          <p
+            class="text-slate-500 font-medium max-w-lg mx-auto md:mx-0 text-center md:text-left"
+          >
+            Soluciones diseñadas específicamente para sectores que requieren
+            confianza y durabilidad.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+          <div
+            class="p-10 md:p-12 rounded-[2.5rem] bg-slate-50/50 dark:bg-[#0f0f0f] border border-slate-100 dark:border-slate-800 hover:border-brand transition-all group"
+          >
+            <div class="mb-8">
+              <svg
+                class="w-10 h-10 text-brand"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewbox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"
+                ></path>
+                <circle cx="12" cy="8" r="6"></circle>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-black mb-4">Profesionales</h3>
+            <p
+              class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed"
+            >
+              Creamos espacios limpios que transmiten la seriedad y el rigor de
+              tu práctica profesional. Tu web como tu mejor tarjeta de
+              presentación.
+            </p>
+          </div>
+          <div
+            class="p-10 md:p-12 rounded-[2.5rem] bg-slate-50/50 dark:bg-[#0f0f0f] border border-slate-100 dark:border-slate-800 hover:border-brand transition-all group"
+          >
+            <div class="mb-8">
+              <svg
+                class="w-10 h-10 text-brand"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewbox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-black mb-4">Impacto Social</h3>
+            <p
+              class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed"
+            >
+              Sitios que maximizan tu visibilidad con costos operativos mínimos,
+              permitiendo que tus recursos lleguen a donde más se necesitan.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="max-w-6xl mx-auto px-6 pt-20 pb-12 md:pt-32 md:pb-16 border-t border-slate-100 dark:border-slate-800"
+        id="proyectos"
+      >
+        <div class="w-full text-center md:text-left mb-16">
+          <h2 class="text-4xl font-black tracking-tighter mb-4">
+            Proyectos<span class="text-brand">.</span>
+          </h2>
+          <p class="text-slate-500 font-medium italic">
+            Casos de estudio y soluciones estáticas implementadas.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <a
+            class="block"
+            href="https://ccer-web.vercel.app"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div class="project-card group cursor-pointer">
+              <div
+                class="aspect-video bg-slate-50 dark:bg-slate-900 rounded-3xl mb-6 overflow-hidden border border-slate-100 dark:border-slate-800 flex items-center justify-center"
+              >
+                <svg
+                  class="project-icon w-12 h-12 text-slate-200 dark:text-slate-800 transition-all duration-300"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewbox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M10 9h4"></path>
+                  <path d="M12 7v5"></path>
+                  <path d="M14 21v-3a2 2 0 0 0-4 0v3"></path>
+                  <path
+                    d="m18 9 3.52 2.147a1 1 0 0 1 .48.854V19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6.999a1 1 0 0 1 .48-.854L6 9"
+                  ></path>
+                  <path
+                    d="M6 21V7a1 1 0 0 1 .376-.782l5-3.999a1 1 0 0 1 1.249.001l5 4A1 1 0 0 1 18 7v14"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Iglesia CCER</h3>
+              <p class="text-slate-500 text-sm leading-relaxed">
+                Plataforma enfocada en la comunicación de eventos y visión
+                institucional.
+              </p>
+            </div> </a
+          ><a class="block" href="#" rel="noopener noreferrer" target="_blank">
+            <div class="project-card group cursor-pointer">
+              <div
+                class="aspect-video bg-slate-50 dark:bg-slate-900 rounded-3xl mb-6 overflow-hidden border border-slate-100 dark:border-slate-800 flex items-center justify-center"
+              >
+                <svg
+                  class="project-icon w-12 h-12 text-slate-200 dark:text-slate-800 transition-all duration-300"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewbox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M11 2v2"></path>
+                  <path d="M5 2v2"></path>
+                  <path
+                    d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"
+                  ></path>
+                  <path d="M8 15a6 6 0 0 0 12 0v-3"></path>
+                  <circle cx="20" cy="10" r="2"></circle>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Salud Dr. Arvelo</h3>
+              <p class="text-slate-500 text-sm leading-relaxed">
+                Landing page profesional con sistema directo para agendamiento
+                de citas.
+              </p>
+            </div> </a
+          ><a class="block" href="#" rel="noopener noreferrer" target="_blank">
+            <div class="project-card group cursor-pointer">
+              <div
+                class="aspect-video bg-slate-50 dark:bg-slate-900 rounded-3xl mb-6 overflow-hidden border border-slate-100 dark:border-slate-800 flex items-center justify-center"
+              >
+                <svg
+                  class="project-icon w-12 h-12 text-slate-200 dark:text-slate-800 transition-all duration-300"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewbox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m14 13-8.381 8.38a1 1 0 0 1-3.001-3l8.384-8.381"
+                  ></path>
+                  <path d="m16 16 6-6"></path>
+                  <path d="m21.5 10.5-8-8"></path>
+                  <path d="m8 8 6-6"></path>
+                  <path d="m8.5 7.5 8 8"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Firma Legal García</h3>
+              <p class="text-slate-500 text-sm leading-relaxed">
+                Presencia digital sobria para firma legal, priorizando la
+                autoridad y confianza.
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="max-w-6xl mx-auto px-6 pt-10 pb-32" id="contacto">
+        <div
+          class="border border-slate-200 dark:border-slate-800 rounded-[2.5rem] md:rounded-[3rem] p-10 md:p-20 relative overflow-hidden"
+        >
+          <div
+            class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          >
+            <div
+              class="order-2 lg:order-1 space-y-8 flex flex-col items-center lg:items-start text-center lg:text-left"
+            >
+              <p
+                class="text-lg md:text-xl text-slate-500 dark:text-slate-400 font-medium leading-relaxed max-w-md"
+              >
+                Sin compromisos ni presiones. Estoy aquí para escuchar tu visión
+                y ver cómo podemos construir un espacio estable y humano juntos.
+              </p>
+              <div
+                class="flex flex-col gap-6 w-full items-center lg:items-start"
+              >
+                <a
+                  class="group flex items-center justify-center gap-3 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 px-10 py-5 rounded-2xl font-black text-xl hover:bg-brand dark:hover:bg-brand dark:hover:text-white transition-all shadow-xl shadow-transparent hover:shadow-brand/20 w-full sm:w-fit"
+                  href="mailto:hola@emivir.dev"
+                >
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewbox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                    <rect height="16" rx="2" width="20" x="2" y="4"></rect>
+                  </svg>
+                  hola@emivir.dev
+                </a>
+                <div class="flex flex-col gap-1 items-center lg:items-start">
+                  <span
+                    class="text-xs font-bold text-slate-400 uppercase tracking-widest"
+                    >O si prefieres algo más ágil:</span
+                  >
+                  <a
+                    class="flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:text-brand font-bold transition-colors w-fit"
+                    href="https://api.whatsapp.com/send?phone=18293204611"
+                  >
+                    <svg
+                      class="w-5 h-5 fill-current"
+                      role="img"
+                      viewbox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                      ></path>
+                    </svg>
+                    Escríbeme por WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="order-1 lg:order-2">
+              <h2
+                class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-[0.9] text-center lg:text-right"
+              >
+                ¿Hablamos sobre tu<br />próximo paso digital<span
+                  class="text-brand"
+                  >?</span
+                >
+              </h2>
+            </div>
+          </div>
+          <div
+            class="absolute -bottom-24 -right-24 w-96 h-96 bg-brand/5 rounded-full blur-[100px] pointer-events-none"
+          ></div>
+          <div
+            class="absolute -top-24 -left-24 w-96 h-96 bg-brand/5 rounded-full blur-[100px] pointer-events-none"
+          ></div>
+        </div>
+      </section>
+    </main>
+    <footer class="border-t border-slate-100 dark:border-slate-800 py-10">
+      <div
+        class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 items-center gap-8 md:gap-0"
+      >
+        <div class="flex justify-center md:justify-start order-2 md:order-1">
+          <p
+            class="text-xs font-bold uppercase tracking-[0.3em] text-slate-400"
+          >
+            © 2026 Emivir Digital
+          </p>
+        </div>
+        <div class="flex justify-center order-1 md:order-2">
+          <div class="logo-text text-2xl">
+            emivir<span class="text-brand">.</span>dev
+          </div>
+        </div>
+        <div
+          class="flex justify-center md:justify-end space-x-8 order-3 text-slate-400"
+        >
+          <a
+            aria-label="GitHub"
+            class="hover:text-brand transition-colors"
+            href="https://github.com/roemdev"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Icono de GitHub</title>
+              <path
+                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+              ></path>
+              <path d="M9 18c-4.51 2-5-2-7-2"></path>
+            </svg>
+          </a>
+          <a
+            aria-label="X (Twitter)"
+            class="hover:text-brand transition-colors"
+            href="https://x.com/roemdev"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Icono de X (Twitter)</title>
+              <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+              <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
