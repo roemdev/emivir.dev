@@ -1,44 +1,45 @@
 ---
 const features = [
   {
-    number: "01",
-    title: "Estabilidad",
-    description: "Mantenimiento enfocado en que tu sitio esté siempre en línea, sin importar el tráfico."
+    number: '01',
+    title: 'Dirección clara',
+    description: 'Definimos una narrativa visual y verbal que proyecta autoridad, sin perder cercanía.'
   },
   {
-    number: "02",
-    title: "Optimización",
-    description: "Arquitecturas estáticas que eliminan la fricción y cargan de forma instantánea."
+    number: '02',
+    title: 'Velocidad premium',
+    description: 'Arquitectura liviana, excelente rendimiento y una experiencia fluida en cualquier dispositivo.'
   },
   {
-    number: "03",
-    title: "Cercanía",
-    description: "Soporte directo y comunicación clara. Sin tecnicismos vacíos."
+    number: '03',
+    title: 'Confianza medible',
+    description: 'Estructuras pensadas para que tus visitantes entiendan rápido qué haces y por qué elegirte.'
   }
 ];
 ---
 
-<section id="sobre-mi" class="max-w-6xl mx-auto px-6 py-20 md:py-24 border-t border-slate-100 dark:border-slate-800">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-        <div class="lg:col-span-7 space-y-8">
-            <h2 class="text-4xl font-black tracking-tighter">Honestidad técnica<span class="text-brand">.</span></h2>
-            <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                Entiendo la web como una extensión de tu trabajo profesional. Mi enfoque no se basa en lo que está de moda, sino en lo que es funcional y duradero para ti.
-            </p>
-            <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                Al integrar herramientas de inteligencia artificial en mi proceso, puedo centrar mis esfuerzos en lo más importante: entender tus necesidades y asegurar que tu inversión digital sea eficiente y transparente desde el primer día.
-            </p>
-        </div>
-        
-        <div class="lg:col-span-5 grid grid-cols-1 gap-8">
-            {features.map((item) => (
-                <div class="border-l-2 border-slate-100 dark:border-slate-800 pl-6 md:pl-8 py-2">
-                    <span class="text-brand font-black text-xs md:text-sm uppercase tracking-widest block mb-2">
-                        {item.number}. {item.title}
-                    </span>
-                    <p class="text-slate-500 text-sm">{item.description}</p>
-                </div>
-            ))}
-        </div>
+<section id="sobre-mi" class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+  <div class="rounded-[2.25rem] border border-slate-200/90 bg-white/85 p-8 md:p-12 shadow-lg shadow-slate-200/40 dark:border-slate-800 dark:bg-slate-900/70 dark:shadow-none">
+    <div class="grid gap-12 lg:grid-cols-12">
+      <div class="lg:col-span-7">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand">Enfoque UX/UI profesional</p>
+        <h2 class="mt-4 text-4xl md:text-5xl font-black tracking-tight text-balance">
+          Diseño sobrio, estratégico y memorable.
+        </h2>
+        <p class="mt-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+          No creo webs “bonitas” por estética. Diseño experiencias digitales orientadas a reputación, claridad y decisión: para que el usuario perciba calidad desde el primer scroll.
+        </p>
+      </div>
+
+      <div class="lg:col-span-5 grid gap-4">
+        {features.map((item) => (
+          <article class="rounded-2xl border border-slate-200 bg-slate-50/90 p-5 dark:border-slate-700 dark:bg-slate-800/70">
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand">{item.number}</p>
+            <h3 class="mt-2 text-lg font-extrabold">{item.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{item.description}</p>
+          </article>
+        ))}
+      </div>
     </div>
+  </div>
 </section>
